@@ -362,7 +362,7 @@ sup=`
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="nav navbar-nav">
           <li>
-            <a class="nav-link" href="index.html"><i class="bi bi-house-door-fill"></i></a>
+            <a class="nav-link" href="index.html"><i class="bi bi-house-door-fill icono-home"></i></a>
           </li>
           <li>
             <a class="nav-link" href="quienes-somos.html">¿Quienes somos?</a>
