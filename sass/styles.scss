@@ -1,5 +1,27 @@
 @import 'variables';
-
+span.barra-lateral {
+  position: absolute;
+  content: "";
+  height: 22px;
+  bottom: 0;
+  top: 10px;
+  transform: skew(-20deg);
+  right: 0;
+  left: 5px;
+  width: 13px;
+  z-index: 10;
+  background-color:$color-primario;
+  &:before {
+      position: absolute;
+      content: "";
+      height: 22px;
+      bottom: 0;
+      top: 0;
+      right: -10px;
+      width: 7px;
+      background-color:$color-secundario;
+    }
+}
 html,
 body{
   margin: 0;
@@ -585,14 +607,12 @@ main {
 /*Calidad insuperable*/
 .calidad-insuperable { 
   .carousel-item {
-    height: auto;
     &:before {
       width: 100%;
       height: 100%;
     }
   }
   .carousel-img {
-    height: 100%;
     min-height: 100%; 
     width:inherit;
   }
@@ -812,7 +832,6 @@ main {
     color: $color-secundario;
     line-height: 1.2;
     position: relative;
-    padding-left:35px;
     span{
       font-family: $subtitulos-font;
       font-size: $subtitulos-size;
@@ -905,6 +924,36 @@ main {
     margin-bottom: 70px;
   }
 }
+.barra-titulo {
+  width: 30px;
+  height: 30px;
+  display:inline-block;
+  float:left;
+  margin-right:5px;
+    .separador {
+    position: absolute;
+    content: "";
+    height: 22px;
+    bottom: 0;
+    top: 10px;
+    transform: skew(-20deg);
+    right: 0;
+    left: 5px;
+    width: 13px;
+    z-index: 10;
+    background-color:$color-primario;
+    &:before {
+      position: absolute;
+      content: "";
+      height: 22px;
+      bottom: 0;
+      top: 0;
+      right: -10px;
+      width: 7px;
+      background-color:$color-secundario;
+    }
+  }
+}
 hr {
   width: 150px;
   color: $color-primario;
@@ -912,29 +961,7 @@ hr {
   position: relative;
   opacity: 1;
 }
-.separador {
-  position: absolute;
-  content: "";
-  height: 22px;
-  bottom: 0;
-  top: 10px;
-  transform: skew(-20deg);
-  right: 0;
-  left: 5px;
-  width: 13px;
-  z-index: 10;
-  background-color:$color-primario;
-  &:before {
-    position: absolute;
-    content: "";
-    height: 22px;
-    bottom: 0;
-    top: 0;
-    right: -10px;
-    width: 7px;
-    background-color:$color-secundario;
-  }
-}
+
 .datos-destacados {
   display:inline-flex;
   align-items: center;
@@ -2316,6 +2343,7 @@ footer {
   .bg-dark {
     p {
       width: 100%;
+      padding: 12px;
     } 
   } 
   .btn i {
