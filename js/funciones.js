@@ -404,7 +404,7 @@ sup=`
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="nav-link" href="catalogo.html">Ver catálogo</a></li>
               <li><a class="nav-link" href="comparativa.html">Comparativa</a></li>
-              <li><a class="nav-link" href="deck-sintetico.html">Deck sintético</a></li>
+              <li><a class="nav-link" href="deck-ecologico.html">Deck Ecológico WPC</a></li>
               <li><a class="nav-link" href="deck-madera.html">Deck de madera</a></li>
               <li><a class="nav-link" href="wall-panel.html">Wall Panel</a></li>
               <li><a class="nav-link" href="pergolas.html">Pérgolas</a></li>
@@ -436,7 +436,7 @@ sup=`
             <div class="col-lg-5 col-md-12">
               <div class="logo-footer">
                 <img src="imagenes/logo/ecodeck-logo.png" alt="logo Ecodeck">
-                <p>Somos una empresa dedicada a la venta, distribución y colocación de decks de alta calidad para toda la República Argentina y países limítrofes.</p>
+                <p>Somos una empresa dedicada a la venta, distribución e instalación de Productos Ecológicos Libres de mantenimiento. Nos especializamos en Decks de WPC, Revestimientos, Cielorrasos de PVC, Pérgolas y Parasoles de WPC. Materiales Premium de última generación.</p>
                 <div class="redes-sociales">
                   <ul>
                     <li><a href="https://www.facebook.com/ecodeckarg" target="_blank"><i class="bi bi-facebook" title="Encontranos en Facebook"></i></a></li>
@@ -448,7 +448,7 @@ sup=`
             <div class="col-lg-3 col-md-12"> 
                 <h4>PRODUCTOS</h4>
                 <ul>       
-                <li><a class="nav-link" href="deck-sintetico.html"><i class="bi bi-caret-right-fill"></i> Deck sintético</a></li>
+                <li><a class="nav-link" href="deck-ecologico.html"><i class="bi bi-caret-right-fill"></i> Deck Ecologico WPC</a></li>
                 <li><a class="nav-link" href="deck-madera.html"><i class="bi bi-caret-right-fill"></i> Deck de madera</a></li>
                 <li><a class="nav-link" href="wall-panel.html"><i class="bi bi-caret-right-fill"></i> Wall Panel</a></li>
                 <li><a class="nav-link" href="pergolas.html"><i class="bi bi-caret-right-fill"></i> Pérgolas</a></li>

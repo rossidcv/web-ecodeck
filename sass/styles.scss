@@ -777,12 +777,29 @@ main {
 .contacto {  
   background-image: url(../imagenes/encabezado-seccion/quienes-somos.jpg);
 } 
-.catalogo, .productocatalogo, 
-.comparativa, 
-.decksintetico, .deckmadera,
-.revestimientos, .pergolas,
-.pisos, .perfiles {
-  background-image: url(../imagenes/encabezado-seccion/productos.jpg);  
+.catalogo{
+  background-image: url(../imagenes/encabezado-seccion/catalogo.jpg);  
+}
+.comparativa {
+  background-image: url(../imagenes/encabezado-seccion/comparativa.jpeg);  
+}
+.deckecologico {
+  background-image: url(../imagenes/encabezado-seccion/deck-ecologico.jpg);  
+}
+.deckmadera {
+  background-image: url(../imagenes/encabezado-seccion/deck-madera.jpg);  
+}
+.wall-panel {
+  background-image: url(../imagenes/encabezado-seccion/wall-panel.jpg);  
+}
+.pergolas {
+  background-image: url(../imagenes/encabezado-seccion/pergolas11.jpg);  
+}
+.pisos {
+  background-image: url(../imagenes/encabezado-seccion/pisos.jpg);  
+}
+.perfiles {
+  background-image: url(../imagenes/encabezado-seccion/perfiles.jpg);  
 }
 .obras {  
   background-image: url(../imagenes/encabezado-seccion/obras.jpg);
@@ -790,6 +807,33 @@ main {
 .cielorraso {  
   background-image: url(../imagenes/encabezado-seccion/cielorrasopvc.png);  
   background-position:center top !important;
+}
+.encabezado-incienso {  
+  background-image: url(../imagenes/encabezado-seccion/incienso.jpg);  
+}
+.encabezado-blanco-smoke {  
+  background-image: url(../imagenes/encabezado-seccion/blanco-smoke.jpg);  
+}
+.encabezado-maple {  
+  background-image: url(../imagenes/encabezado-seccion/maple.jpg);  
+}
+.encabezado-gris-ash {  
+  background-image: url(../imagenes/encabezado-seccion/gris-ash.jpg);  
+}
+.encabezado-pino-cca {  
+  background-image: url(../imagenes/encabezado-seccion/pino-cca.jpg);  
+}
+.encabezado-lapacho {  
+  background-image: url(../imagenes/encabezado-seccion/lapacho.jpg);  
+}
+.encabezado-guayubira {  
+  background-image: url(../imagenes/encabezado-seccion/guayubira.jpg);  
+}
+.encabezado-eucalipto-colorado {  
+  background-image: url(../imagenes/encabezado-seccion/eucalipto-colorado.jpeg);  
+}
+.encabezado-jardin-vertical {  
+  background-image: url(../imagenes/encabezado-seccion/jardin-vertical.jpg);  
 }
 
 /*Contenido web*/
@@ -1335,7 +1379,7 @@ td.madera {
 }
 
 /*DECK SINTÉTICO*/
-.deck-baldosas {
+.deck-baldosones {
   background-color: #f2f2f2;
   .bg-white {
     background-color: transparent !important;
@@ -1369,7 +1413,7 @@ td.madera {
 }
 
 /*REVESTIMIENTOS*/
-.bg-white.productos-revestimientos {
+.bg-white.productos-wall-panel {
   img{
     width: 65%;
   }
@@ -1377,7 +1421,7 @@ td.madera {
 
 /*PISOS*/
 .linea-pisos,
-.baldosas,
+.baldosones,
 .cielorrasos {
   td{
     font-family: $parrafo-font;
@@ -1668,11 +1712,11 @@ td.madera {
     left: 20px;
     right: 20px;
     bottom: 20px;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
   }
   &:hover h4,
   &.hover h4 {
-    color: $color-secundario;
+    color: $color-primario;
   }
 }
 
