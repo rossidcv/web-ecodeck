@@ -1,27 +1,5 @@
 @import 'variables';
-span.barra-lateral {
-  position: absolute;
-  content: "";
-  height: 22px;
-  bottom: 0;
-  top: 10px;
-  transform: skew(-20deg);
-  right: 0;
-  left: 5px;
-  width: 13px;
-  z-index: 10;
-  background-color:$color-primario;
-  &:before {
-      position: absolute;
-      content: "";
-      height: 22px;
-      bottom: 0;
-      top: 0;
-      right: -10px;
-      width: 7px;
-      background-color:$color-secundario;
-    }
-}
+
 html,
 body{
   margin: 0;
@@ -1152,7 +1130,7 @@ hr {
 /*CATÁLOGO*/
 ul.filters{ 
   margin: 0;
-  padding: 30px 0;
+  padding: 30px 12px;
   > li{
     list-style: none;
     display: inline-flex;
@@ -1714,12 +1692,13 @@ td.madera {
     }
   }
 }
+
 .producto-catalogo {
   padding-bottom:40px;
   .producto {
     width: 100%;
-    height: 400px;
-    z-index: 100;  
+    height: fit-content;
+    z-index: 100;
   }
   .big-img {
     border-radius: 50%;
@@ -1729,14 +1708,14 @@ td.madera {
     height: 70px;
     margin: 0 auto;
     position: relative;
-    left: 0;
+    left: 0;  
     .icon-left, 
     .icon-right {
       width: 12px;
-      height: 15px;
+      height: 24px;
       cursor: pointer;
       position: absolute;
-      top: 8px;
+      top: 0;
       bottom: 0;
       margin: auto 0;
     }
@@ -2157,6 +2136,15 @@ footer {
     .ecodeck-pisos {
       top:0;
     }
+  }  
+  .producto-catalogo {
+    overflow:hidden;
+  }  
+  .producto-catalogo .producto #show-img {
+    z-index:999;
+    position:relative;
+    cursor: crosshair;
+    width: 100%;
   }
   .imagen-fondo .iconos-texto {
     width:100%;
