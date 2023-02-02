@@ -793,7 +793,7 @@ main {
   background-image: url(../imagenes/encabezado-seccion/wall-panel.jpg);  
 }
 .pergolas {
-  background-image: url(../imagenes/encabezado-seccion/pergolas11.jpg);  
+  background-image: url(../imagenes/encabezado-seccion/pergolas.jpg);  
 }
 .pisos {
   background-image: url(../imagenes/encabezado-seccion/pisos.jpg);  
@@ -1673,7 +1673,9 @@ td.madera {
     transform: translateY(40px) rotate(45deg);
   }
 }
-
+.carousel-img1{
+  background:linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%), url(../css/imagenes/catalogo-productos/lapacho-00.jpg) no-repeat center;
+}
 /*Productos Perfiles*/
 .uso-perfiles {  
   position: relative; 
@@ -1694,30 +1696,64 @@ td.madera {
     left: 0;
     right: 0;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:auto;     
+    background-color: rgba(0, 0, 0, 0.6);   
+  } 
+  &:hover {
+    i{
+      opacity:1;
+      color: #fff;
+      display:flex; 
+      justify-content: center;
+      align-items: center;
+      font-size: 60px;  
+    } 
+    h4 {
+      display:none;    
+      opacity:0;
+    }
   }
+  i {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 3px 0;    
+    display:flex;
+    opacity:0;
+    color:$color-primario; 
+    position:absolute;          
+  }    
   h4 {
     font-family: $subtitulos-font;
     font-size: 22px;
     font-weight: 400;
     line-height: 28px;
+    text-align:center;
     color: $color-primario;
-    margin: 3px 0;
-    position: relative;
-    top: 170px;
-  }
+    position: absolute;
+    opacity:1;
+    display:flex;    
+    
+  }  
   &:hover figcaption,
   &.hover figcaption {
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.2);
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.2);   
   }
   &:hover h4,
   &.hover h4 {
     color: $color-primario;
+    display:flex;
+    justify-content: center;
+    align-items: center;
   }
+
 }
 
 /*GALERIA PRODUCTO CATÁLOGO*/
@@ -2132,12 +2168,7 @@ footer {
     h4 {
       font-size: 18px;
     }
-  }
-  .uso-perfiles {
-    h4 {
-      top:100px;
-    }
-  }
+  }  
 }
 
 @media (max-width: 991px) {
@@ -2205,13 +2236,6 @@ footer {
   }
   .form-group {
     margin: 0 0 25px 0;
-  }
-  .uso-perfiles {
-    h4 {
-      font-size: 16px;
-      line-height: 20px;
-      top:50px;
-    }
   }
   footer {
     h4 {
@@ -2359,13 +2383,6 @@ footer {
   .datos-destacados.tipos-perfiles {
     padding: 20px 0;
   }
-  .uso-perfiles {
-    h4 {
-      top:280px;
-      line-height: 28px;
-      font-size:20px;
-    } 
-  }
 }
 
 @media (max-width: 480px) {
@@ -2403,12 +2420,6 @@ footer {
     h2 {
       font-size: 45px;
     }  
-  }
-  .uso-perfiles {
-    h4 {
-      top:150px;
-      line-height: 28px;
-    }
   }
 }
 
