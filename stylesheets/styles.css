@@ -1973,7 +1973,7 @@ td.madera {
 /* line 1698, ../sass/styles.scss */
 .producto-catalogo .producto {
   width: 100%;
-  height: fit-content;
+  height: 400px;
   z-index: 100;
 }
 /* line 1703, ../sass/styles.scss */
