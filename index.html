@@ -144,7 +144,7 @@
 			<div class="row">
 				<h3>Suscribite y recibí las últimas novedades</h3>
 				<p>Te invitamos a suscribirte para enterarte en forma directa de todas las novedades de nuestros productos.</p>
-				<a class="btn btn-default btn animate__animated animate__slideInUp" href="#" role="button" data-bs-toggle="modal" data-bs-target="#ModalForm">Suscribite<i class="bi bi-arrow-right-circle-fill"></i></a>
+				<a class="btn btn-default btn animate__animated animate__slideInUp" href="#" type="button" data-bs-toggle="modal" data-bs-target="#ModalForm">Suscribite<i class="bi bi-arrow-right-circle-fill"></i></a>
 
 				<div class="modal fade" id="ModalForm" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
 					<div class="modal-dialog modal-dialog-centered">
@@ -155,12 +155,12 @@
 									<h4 class="text-center">Completá los campos para suscribirte</h4>
 									<form>
 										<div class="mb-3">
-											<label for="exampleInputPassword1" class="form-label">Nombre</label>
-											<input type="password" class="form-control" id="exampleInputPassword1">
+											<label for="exampleInputName1" class="form-label">Nombre</label>
+											<input type="text" class="form-control" id="exampleInputName1" required>
 										</div><!-- cierra mb -->
 										<div class="mb-3 mt-4">
 											<label for="exampleInputEmail1" class="form-label">E-mail</label>
-											<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+											<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
 										</div><!-- cierra mb -->
 										<button type="submit" class="btn animate__animated animate__slideInUp">ENVIAR <i class="bi bi-envelope-fill"></i></button>
 									</form>
