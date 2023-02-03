@@ -3,7 +3,7 @@
 html,
 body{
   margin: 0;
-  padding: 0;
+  padding: 0 !important;
   position: relative;
   min-height: 100vh;
 }
@@ -634,7 +634,8 @@ main {
   }
 }
 .bg-dark,
-.imagen-fondo {
+.imagen-fondo,
+.suscripcion {
   h3 {
     font-family: $subtitulos-font;
     font-size: $subtitulos-size;
@@ -1075,6 +1076,12 @@ hr {
 /*Misión / Visión */
 .imagen-fondo {
   background-image: url(../imagenes/carousel-home/home-02.jpg);
+}
+.suscripcion {
+  background-image: url(../imagenes/encabezado-seccion/suscripcion.jpeg);
+}
+.imagen-fondo,
+.suscripcion {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -1103,27 +1110,61 @@ hr {
     color: $color-primario;
     text-align: center;
     margin: 0 auto;
-    padding: 15px 0 0 0;
+    padding: 15px 0;
     position: relative;
   }
   p { 
     color: #a5a5a5;
     position:relative;
     text-align:center;
-    margin:0 auto;
-    width: 55%;
+    margin:0 auto;    
     span {
       color: #ABC566;
       font-size: 16px;
       font-weight: bold;
     }
   }
+  a {
+    width:auto;
+    margin-top:15px;
+  }
   .iconos-texto {
     width:85%;
     margin:0 auto;
     padding:0;
-  }    
+  } 
 }
+.modal-body {
+  padding: 0;
+}
+.btn-close {
+  position: absolute;
+  right: 0;
+  padding: 1em;
+}
+.form-area {
+  padding: 3em;
+  background-color:#000;  
+  color: #fff;
+  border:2px solid $color-primario;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.5);
+} 
+.modal-body {
+  .btn {
+    display:block; 
+    margin-top:25px;
+    padding:6px 10px; 
+    i {
+      color: $color-primario;
+      font-size: 40px;
+      margin: 0 5px 0 10px;
+      transform: scale(1);
+      -webkit-transition: all 3s;
+      vertical-align:middle;
+    }
+  }
+} 
+
 .card-group {
   position: relative;
   top: 40px;
@@ -1792,7 +1833,7 @@ td.madera {
     .icon-left, 
     .icon-right {
       width: 12px;
-      height: 24px;
+      height: 18px;
       cursor: pointer;
       position: absolute;
       top: 0;
@@ -2108,6 +2149,9 @@ footer {
   .show > .nav-link {
     color:$color-primario !important;
   }
+  .redes-sociales {
+    display:inline;
+  }
 }
 
 .redes-sociales {
@@ -2317,10 +2361,7 @@ footer {
   }
   .collapse:not(.show) {
     display: none;
-  }  
-  .show {
-    height: auto;
-  }
+  } 
   .navbar-collapse {
     background-color: #fff;
     flex-basis: 100%;
@@ -2385,6 +2426,12 @@ footer {
   }
 }
 
+@media (max-width: 600px){
+  .form-area{
+      padding: 1.5em;
+  }
+}
+
 @media (max-width: 480px) {
   .carousel-home {
     .carousel-texto h2,
@@ -2398,6 +2445,9 @@ footer {
       padding: 12px;
     } 
   } 
+  .btn {
+    font-size: 12px;
+  }
   .btn i {
     font-size:30px;
   }
@@ -2423,12 +2473,7 @@ footer {
   }
 }
 
-@media (max-width: 376px) {
-  .btn {
-    a {
-      font-size: 12px;
-    }
-  }
+@media (max-width: 376px) {  
   td.deck-ecologico, 
   td.madera,
   .condiciones-lista,

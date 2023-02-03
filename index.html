@@ -19,6 +19,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 	<link rel="stylesheet" type="text/css" href=".//stylesheets/styles.css">
+
 </head>
 
 <body>
@@ -92,7 +93,7 @@
 
 	<div class="boton-arrow-down">
 		<button class="arrow-down" onclick="location.href='#beneficios'"><i class="bi bi-arrow-down-circle-fill"></i></button>
-	</div><!-- cierra boton-arrow-down--> 
+	</div><!-- cierra boton-arrow-down--> 	
 
 	<section id="beneficios">
 		<div class="principales-beneficios py-5">
@@ -138,6 +139,40 @@
 		</div><!-- cierra principales-beneficios-->
 	</section>
 
+	<div class="suscripcion py-5">
+		<div class="container py-5">
+			<div class="row">
+				<h3>Suscribite y recibí las últimas novedades</h3>
+				<p>Te invitamos a suscribirte para enterarte en forma directa de todas las novedades de nuestros productos.</p>
+				<a class="btn btn-default btn animate__animated animate__slideInUp" href="#" role="button" data-bs-toggle="modal" data-bs-target="#ModalForm">Suscribite<i class="bi bi-arrow-right-circle-fill"></i></a>
+
+				<div class="modal fade" id="ModalForm" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-body">
+								<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+								<div class="form-area">
+									<h4 class="text-center">Completá los campos para suscribirte</h4>
+									<form>
+										<div class="mb-3">
+											<label for="exampleInputPassword1" class="form-label">Nombre</label>
+											<input type="password" class="form-control" id="exampleInputPassword1">
+										</div><!-- cierra mb -->
+										<div class="mb-3 mt-4">
+											<label for="exampleInputEmail1" class="form-label">E-mail</label>
+											<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+										</div><!-- cierra mb -->
+										<button type="submit" class="btn animate__animated animate__slideInUp">ENVIAR <i class="bi bi-envelope-fill"></i></button>
+									</form>
+								</div><!-- cierra form-area-->  
+							</div><!-- cierra modal-body-->  
+						</div><!-- cierra modal-content-->  
+					</div><!-- cierra modal-dialog-->  
+				</div><!-- cierra modal-->  
+			</div><!-- cierra row-->            
+		</div><!-- cierra container-->
+	</div><!-- cierra suscripcion-->
+
 	<div class="aspectos-decorativos">
 		<div class="calidad-insuperable">
 			<div class="container py-5">
@@ -173,7 +208,7 @@
 								</div><!-- cierra barra-titulo -->
 								<h3>Calidad insuperable</h3>
 								<hr>
-								<p>Nuestro <span>DECK ECOLÓGICO de WPC</span> de última generación, se encuentra a la vanguardia de la creación de espacios exteriores. <span>La calidad de nuestros productos</span> lo hacen superior al resto, siendo así los mejores del mercado.</p>							
+								<p>Nuestro <span>DECK ECOLÓGICO de WPC</span> de última generación, se encuentra a la vanguardia de la creación de espacios exteriores. <span>La calidad de nuestros productos</span> lo hacen superior al resto, siendo así los mejores del mercado.</p>
 							</div><!-- cierra bg-white -->
 						</div><!-- cierra contenido-texto -->
 					</div><!-- cierra col --> 
@@ -246,7 +281,7 @@
 	<a href="https://api.whatsapp.com/send?phone=+" class="btn-wsp" target="_blank">
 		<i class="bi bi-whatsapp"></i>
 	</a> 
-	
+
 	<script src="js/funciones.js"></script>
 
 </body>
