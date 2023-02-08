@@ -2851,65 +2851,70 @@ footer .redes-sociales {
   .datos-destacados.tipos-perfiles {
     padding: 20px 0;
   }
+
+  /* line 2427, ../sass/styles.scss */
+  .colores {
+    margin-top: 20px;
+  }
 }
 @media (max-width: 600px) {
-  /* line 2430, ../sass/styles.scss */
+  /* line 2433, ../sass/styles.scss */
   .form-area {
     padding: 1.5em;
   }
 }
 @media (max-width: 480px) {
-  /* line 2437, ../sass/styles.scss */
+  /* line 2440, ../sass/styles.scss */
   .carousel-home .carousel-texto h2,
   .carousel-home .carousel-texto h2 span {
     font-size: 35px;
   }
 
-  /* line 2443, ../sass/styles.scss */
+  /* line 2446, ../sass/styles.scss */
   .bg-dark p {
     width: 100%;
     padding: 12px;
   }
 
-  /* line 2448, ../sass/styles.scss */
+  /* line 2451, ../sass/styles.scss */
   .btn {
     font-size: 12px;
   }
 
-  /* line 2451, ../sass/styles.scss */
+  /* line 2454, ../sass/styles.scss */
   .btn i {
     font-size: 30px;
   }
 
-  /* line 2454, ../sass/styles.scss */
+  /* line 2457, ../sass/styles.scss */
   .encabezado-seccion h3,
   .encabezado-seccion h3 span {
     font-size: 30px;
   }
 
-  /* line 2458, ../sass/styles.scss */
+  /* line 2461, ../sass/styles.scss */
   .lista-colores {
     top: 50px;
     margin-bottom: 40px;
   }
 
-  /* line 2462, ../sass/styles.scss */
+  /* line 2465, ../sass/styles.scss */
   .colores {
     width: 150px;
     padding-bottom: 20px;
   }
 
-  /* line 2467, ../sass/styles.scss */
+  /* line 2470, ../sass/styles.scss */
   .datos-destacados:after {
     top: 0;
   }
-  /* line 2470, ../sass/styles.scss */
+  /* line 2473, ../sass/styles.scss */
   .datos-destacados h2 {
     font-size: 45px;
   }
 }
 @media (max-width: 376px) {
-  /* line 2477, ../sass/styles.scss */
+  /* line 2480, ../sass/styles.scss */
   td.deck-ecologico,
   td.madera,
   .condiciones-lista,
@@ -2918,13 +2923,13 @@ footer .redes-sociales {
     font-size: 12px;
   }
 
-  /* line 2484, ../sass/styles.scss */
+  /* line 2487, ../sass/styles.scss */
   .producto-catalogo .small-img {
     width: auto;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 768px) {
-  /* line 2490, ../sass/styles.scss */
+  /* line 2493, ../sass/styles.scss */
   .btn-wsp {
     width: 63px;
     height: 63px;
