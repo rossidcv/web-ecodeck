@@ -303,6 +303,9 @@ main {
       position: absolute;
     }
   }
+  .carousel-inner {
+    margin-top:0;
+  }
   .carousel-img {
     width: inherit;
     min-height: 100vh;
@@ -2397,10 +2400,7 @@ footer {
   }
   .carousel-inner {
     margin-top:40px;
-  }  
-  .boton-arrow-down {
-    top:-150px;
-  }
+  } 
   .bg-dark {
     p {
       width: 80%;    
@@ -2418,15 +2418,13 @@ footer {
       width: 3    0%;
     }
     .ecodeck-pisos {
+      margin-bottom:0;
       top:0;
     }
     .wpc {
       padding-bottom:50px;
     }
-  }
-  .bg-white .ecodeck-calidad, 
-  .bg-white .deck-sintetico-img, 
-  .bg-white .ecodeck-pisos, 
+  }   
   .bg-white .comparativa {
     margin-top:70px;
     margin-bottom:0px;
@@ -2454,14 +2452,16 @@ footer {
     padding:30px 0;
   }
   .form-group {
-    margin: 0 0 25px 0;
+    margin: 0 0 25px 0 !important;
+  }
+  .calidad-insuperable .carousel-img {
+    margin-bottom:40px;
   }
   footer {
     h4 {
       padding-top:30px;
     }
   }
-
   .redes-sociales {
     ul {
       padding: 0;
@@ -2669,6 +2669,10 @@ footer {
       font-size: 45px;
     }  
   }
+  .colores-baldosones, 
+  .colores-tablas-extrude {
+    padding-bottom:10px;
+  }
 }
 
 @media (max-width: 376px) {  
@@ -2689,5 +2693,8 @@ footer {
     width:63px;
     height:63px;
     line-height: 66px;
+  }
+  footer .bg-dark p {
+    padding:12px 0;
   }
 }
