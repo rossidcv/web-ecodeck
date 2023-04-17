@@ -72,6 +72,9 @@ a:hover {
       i.icono-home {
         padding-left:0;
       }
+      i#flecha {
+      font-size:12px;
+      }
       &:hover {
         color:$color-primario;
       }  
@@ -131,10 +134,25 @@ a:hover {
   color: $color-primario !important;
   border-bottom:1px solid $color-primario;
 } 
-.dropdown {
-  i {
-    font-size: 15px !important;
+.navbar-nav #nav-contacto {
+  background-color:#69B417;
+  color:#fff !important;;
+  font-weight: 500;
+  padding:12px;
+  position:relative;
+  top:13px;
+  border-radius:50px;
+  &:hover {
+    opacity:0.9;
+    color:#fff;
   }
+}
+.boton-contacto-slider 
+.navbar-nav li.nav-item-contacto {
+  padding:0 10px;
+}
+.navbar-nav li.nav-item-contacto:hover {
+  border-bottom:transparent !important;  
 }
 .dropdown-menu {
   display: block;
@@ -169,6 +187,13 @@ a:hover {
           padding:10px;
         }
       }
+    }
+  }
+  .navbar-nav {
+    #nav-contacto {
+      padding:5px 10px;
+      top:12px;
+      font-weight: 500;
     }
   }
 }
@@ -356,7 +381,75 @@ main {
   opacity: 1;
   background-color: #1A6931;
 }
-
+#boton-contacto-slider {
+  background-color:#69B417;
+  color:#fff !important;;
+  font-weight: 500;
+  padding:15px;  
+  border-radius:50px;
+  &:hover {
+    opacity:0.8;
+    color:#fff;
+  }
+}
+.bg-white {    
+  .call-action {
+    background-color:#69B417;
+    background-image: url(../imagenes/call-action2.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin:0 auto;
+    h3, p {
+      text-align:center;
+      position:relative;
+    }
+    h3 {
+      color:#242424;
+      padding-bottom:10px;
+    }
+    p {
+      padding-bottom:20px;
+      color:#000;
+      span {
+        color:#000;
+      }
+    }
+    #boton-contacto-slider {
+      margin:0 auto;
+      text-align:center;
+      display:block;
+      width:max-content;
+    }
+    &:before {
+      background: rgb(2,0,36);
+      background: linear-gradient(270deg, rgba(2,0,36,0) 0%, rgba(171,197,102,1) 23%);
+      width: 100%;
+      height: 100%;
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 0;
+    }
+    &:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    border: 3px solid red;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 5s infinite;
+    }
+  }
+}
 /*Líneas Carousel Home*/
 .linea-vertical-top,
 .linea-vertical-bottom {
@@ -635,7 +728,9 @@ main {
 }
 .bg-dark,
 .imagen-fondo,
-.suscripcion {
+.suscripcion,
+.imagen-fondo-datos-deck,
+.imagen-fondo-datos-perfiles {
   h3 {
     font-family: $subtitulos-font;
     font-size: $subtitulos-size;
@@ -664,7 +759,14 @@ main {
     }
   }
 }
-
+.suscripcion {
+  h4 {
+    color:#fff !important;
+  }
+}
+.imagen-fondo p{
+  width:80%;
+}
 /*Medios de pago*/
 .lista-medios-de-pago {
   height:auto;
@@ -1049,8 +1151,26 @@ hr {
   display: inline-grid;
   width: 110px;
   img {
-    width: 70px !important;
-    height: 70px !important;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+    margin: 0 auto;
+    margin-bottom: 0 !important;
+  }
+  em {
+    font-size:12px;
+    font-weight:light;
+  }
+}
+.colores-baldosones,
+.colores-tablas-extrude {
+  display: inline-grid;
+  width: 90px;
+  img {
+    width: 60px !important;
+    height: 60px !important;
     border-radius: 50%;
     float: left;
     margin-right: 10px;
@@ -1081,7 +1201,9 @@ hr {
   background-image: url(../imagenes/encabezado-seccion/suscripcion.jpeg);
 }
 .imagen-fondo,
-.suscripcion {
+.suscripcion,
+.imagen-fondo-datos-deck,
+.imagen-fondo-datos-perfiles {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -1144,8 +1266,8 @@ hr {
 }
 .form-area {
   padding: 3em;
-  background-color:#000;  
-  color: #fff;
+  background-color:#69B417;  
+  color: #fff !important;
   border:2px solid $color-primario;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.5);
 } 
@@ -1154,8 +1276,9 @@ hr {
     display:block; 
     margin-top:25px;
     padding:6px 10px; 
+    color: #fff;
     i {
-      color: $color-primario;
+      color: #fff;
       font-size: 40px;
       margin: 0 5px 0 10px;
       transform: scale(1);
@@ -1177,16 +1300,23 @@ hr {
     transform: translateY(-15px);
     background-color: $color-primario;  
     color: #fff !important;
-  }
-  .card-body:hover h4,
+  }  
   .card-body:hover p {
-    color: #fff;
+    color: #000;
+  }
+  .card-body:hover h4 {
+    font-weight:600;
+    color: #242424;
   }
 }
 .card:nth-child(2){
   background-color: $color-primario;
-  h4, p {
-    color: #fff;
+  p {
+    color: #000;
+  }
+  h4 {
+    font-weight:600;
+    color: #242424;
   }
   &:hover{
     background-color: #fff;    
@@ -1204,7 +1334,7 @@ hr {
     font-size: $parrafo-size;
     color: $color-parrafo;
     line-height: 26px;
-    text-align: left;
+    text-align: center;
     font-weight:400;    
     margin: 0;
     padding: 15px;
@@ -1240,8 +1370,9 @@ ul.filters > li > a{
   }
 }
 ul.filters > li.active > a{
-  color: #fff;
+  color: #242424;
   background-color: $color-primario;
+  font-weight:600;
 }
 .projects {  
   .card{
@@ -1284,8 +1415,9 @@ ul.filters > li.active > a{
       -moz-transform: skew(20deg); 
       -o-transform: skew(20deg);
       margin: 0; 
-      color: #fff;
-      font-weight:400;
+      color: #000;
+      font-weight:600;
+      font-size:14px;
     }    
   }
   .card-overlay{
@@ -1395,7 +1527,7 @@ ul.filters > li.active > a{
   background-color: #a94442 !important;
 }
 .comparativa-deck {
-  background-color: $color-primario !important;
+  background-color: #679631 !important;
 }
 .table-striped {
   tr {
@@ -1413,30 +1545,39 @@ td.madera {
   padding:5px 15px;
 } 
 td.deck-ecologico {
-  background-color: $color-primario;    
+  background-color: rgba(103,150,49,1);    
 }
 td.madera {
   background-color: rgba(169,68,66,1);
 }
 
-/*DECK SINTÉTICO*/
+/*DECK ECOLÓGICO*/
 .deck-baldosones {
   background-color: #f2f2f2;
   .bg-white {
     background-color: transparent !important;
   }
 }
+.imagen-fondo-datos-deck {
+  background-image: url(../imagenes/deck-ecologico/deck-ecologico-05.jpg);
+}
 .aspectos-decorativos,
 .aspectos-decorativos .bg-white {
   background-color: $color-primario !important;  
   h3, p, p span {
-    color: #fff;
+    color: #242424;
   }
   .separador {
     background-color: #fff;
     &:before {
       background-color: $color-secundario;
     }
+  }
+}
+.tablas-wpc {
+  background-color: #f2f2f2;
+  .bg-white {
+    background-color: transparent !important;
   }
 }
 
@@ -1459,11 +1600,18 @@ td.madera {
     width: 65%;
   }
 }
-
+.wall-panel-spc,
+.wall-panel-similmadera {
+  background-color: #f2f2f2;
+  .bg-white {
+    background-color: transparent !important;
+  }
+}
 /*PISOS*/
 .linea-pisos,
 .baldosones,
-.cielorrasos {
+.cielorrasos,
+.tipos-revestimientos {
   td{
     font-family: $parrafo-font;
     font-size: $parrafo-size;
@@ -1532,7 +1680,9 @@ td.madera {
     z-index: 10;
   }
 }
-
+.imagen-fondo-datos-perfiles {
+  background-image: url(../imagenes/perfiles/perfiles-08.jpg);
+}
 /*Porcentaje*/
 .circlePercent,
 .circlePercent2,
@@ -1909,9 +2059,15 @@ td.madera {
   }
   h3,
   p {
-    color: #fff;
     position: relative;
     top: 50%;
+  }
+  p {
+    color: #000;
+    font-weight:bold;
+  }
+  h3 {
+    color: #fff;
   }
   &:hover::after {
     opacity: 1;
@@ -1927,6 +2083,9 @@ td.madera {
     }
     img {
       width: 100%;
+    }
+    h3 {
+      color:#000 !important;
     }
   }
   img {
@@ -2140,7 +2299,7 @@ footer {
       }
     }    
     .footer-direccion {
-      padding-left:22px;
+      cursor: pointer;
     }
   }
   .nav-link.active, 
@@ -2234,8 +2393,13 @@ footer {
     } 
   } 
   .carousel-img {
-    margin-bottom: 40px;
     width: 100%;
+  }
+  .carousel-inner {
+    margin-top:40px;
+  }  
+  .boton-arrow-down {
+    top:-150px;
   }
   .bg-dark {
     p {
@@ -2259,6 +2423,13 @@ footer {
     .wpc {
       padding-bottom:50px;
     }
+  }
+  .bg-white .ecodeck-calidad, 
+  .bg-white .deck-sintetico-img, 
+  .bg-white .ecodeck-pisos, 
+  .bg-white .comparativa {
+    margin-top:70px;
+    margin-bottom:0px;
   }  
   .producto-catalogo {
     overflow:hidden;
@@ -2353,7 +2524,20 @@ footer {
     .dropdown-menu {
       width: 100%;
     }    
-  }  
+  }
+  .navbar-nav #nav-contacto {
+    background-color:#fff;
+    top:0 !important;;
+    border-radius:0;
+    color: #212529 !important;
+      &:hover {
+        background-color: #f2f2f2;
+    }
+  }
+  .navbar-nav #nav-contacto.active {
+    background-color:$color-primario !important;
+    color:#fff !important;    
+  } 
   .navbar-nav .nav-link.active, .navbar-nav .show > .nav-link,
   .navbar-nav .nav-link.active, .navbar-nav .show > .nav-link {
     color:#fff !important;
@@ -2435,7 +2619,10 @@ footer {
 
 @media (max-width: 600px){
   .form-area{
-      padding: 1.5em;
+    padding: 1.5em;
+  }
+  #boton-contacto-slider {
+    margin-bottom:10px;
   }
 }
 
@@ -2445,6 +2632,10 @@ footer {
     .carousel-texto h2 span {
       font-size: 35px;
     }
+  }
+  .linea-vertical-top,
+  .linea-vertical-bottom {
+    display:none;
   }
   .bg-dark {
     p {

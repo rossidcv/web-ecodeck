@@ -29,7 +29,7 @@ $(document).ready(function(){
         $(".navbar").css({"background-color": "#000"});
         $(".navbar-nav li a").css({"color": "#fff"});
         $(".navbar-nav .dropdown-menu li a").css({"color": "#ABC566"});
-        $(".navbar-nav li a.active").css({"color": "#ABC566", "font-weight": "700"});
+        $(".navbar-nav li a.active").css({"color": "#ABC566"});
         flag = true;
       }
     } 
@@ -399,7 +399,7 @@ sup=`
           </li>
           <li class="dropdown">
             <a class="nav-link dropdown-toggle" href="." id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Productos <i class="bi bi-caret-down-fill"></i>
+              Productos <i id="flecha" class="bi bi-caret-down-fill"></i>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="nav-link" href="catalogo.html">Ver catálogo</a></li>
@@ -416,8 +416,8 @@ sup=`
           <li>
             <a class="nav-link" href="obras.html">Obras</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contacto</a>
+          <li class="nav-item-contacto">
+            <a id="nav-contacto" class="nav-link" href="contacto.html">Contactanos</a>
           </li>
         </ul>
       </div>
@@ -455,7 +455,7 @@ sup=`
             <div class="col-lg-4 col-md-12">  
                 <h4>CONTACTO</h4>
                 <ul class="contacto-footer">
-                  <li><a href=""><i class="bi bi-geo-alt"></i><span>Dirección Oficinas administrativas:</span> Av. Olazabal 1515, Belgrano, CABA </a></li>                
+                  <li><a class="footer-direccion" href="https://goo.gl/maps/pG6BBr4cebvdmBFX9" target="_blank"><i class="bi bi-geo-alt"></i><span>Dirección Oficinas administrativas:</span> Amenabar 618, CABA </a></li>                
                   <li><a href=""><i class="bi bi-telephone"></i> <span>Ventas:</span> (011) 5353-4870</a></li>
                   <li><a href=""><i class="bi bi-phone-vibrate"></i> <span>Celular:</span> (011) 15-6759-1079</a></li>
                   <li><a href=""><i class="bi bi-phone-vibrate"></i> <span>Celular:</span> (011) 15-6733-1111</a></li>
