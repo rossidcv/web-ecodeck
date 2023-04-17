@@ -402,7 +402,6 @@ sup=`
               Productos <i id="flecha" class="bi bi-caret-down-fill"></i>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="nav-link" href="catalogo.html">Ver catálogo</a></li>
               <li><a class="nav-link" href="comparativa.html">Comparativa</a></li>
               <li><a class="nav-link" href="deck-ecologico.html">Deck Ecológico WPC</a></li>
               <li><a class="nav-link" href="deck-madera.html">Deck de madera</a></li>
@@ -455,7 +454,7 @@ sup=`
             <div class="col-lg-4 col-md-12">  
                 <h4>CONTACTO</h4>
                 <ul class="contacto-footer">
-                  <li><a class="footer-direccion" href="https://goo.gl/maps/pG6BBr4cebvdmBFX9" target="_blank"><i class="bi bi-geo-alt"></i><span>Dirección Oficinas administrativas:</span> Amenabar 618, CABA </a></li>                
+                  <li><a class="footer-direccion" href="https://goo.gl/maps/pG6BBr4cebvdmBFX9" target="_blank"><i class="bi bi-geo-alt"></i><span>Dirección Oficina administrativa y Showroom:</span> Amenabar 618, CABA </a></li>                
                   <li><a href=""><i class="bi bi-telephone"></i> <span>Ventas:</span> (011) 5353-4870</a></li>
                   <li><a href=""><i class="bi bi-phone-vibrate"></i> <span>Celular:</span> (011) 15-6759-1079</a></li>
                   <li><a href=""><i class="bi bi-phone-vibrate"></i> <span>Celular:</span> (011) 15-6733-1111</a></li>
