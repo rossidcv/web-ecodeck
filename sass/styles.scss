@@ -12,13 +12,16 @@ body{
   padding: 0;
   box-sizing: border-box;
 }
-ul, li, a, button{
+ul, li, a{
   text-decoration: none;
   list-style-type: none;
-  padding:0;
+  padding: 0;
 }
 a:hover {
   color:#FFF;
+}
+button btn{
+  padding:0 !important;
 }
 
 /*Navbar*/
@@ -44,7 +47,9 @@ a:hover {
 .navbar-brand {
   img {
     transition: max-height 0.4s;    
-    max-height: 25px;  
+    max-height: 25px;
+    display: flex;
+    justify-content: center;  
   }
 }
 .navbar-nav {
@@ -294,7 +299,7 @@ main {
 .carousel-home {
   .carousel-item {   
     height: auto;
-    max-height: 100%;   
+    max-height: 100vh;   
     &:before {
       background: rgba(0, 0, 0, 0.7);
       width: 100%;
@@ -349,7 +354,7 @@ main {
       color: #fff;
       font-weight: 400;
       line-height: 28px;
-      letter-spacing: 1;
+      letter-spacing: 0.9px;
       margin: 0 auto;
       padding: 20px 0;
     }
@@ -384,18 +389,25 @@ main {
   opacity: 1;
   background-color: #1A6931;
 }
-#boton-contacto-slider {
-  background-color:#69B417;
-  color:#fff !important;;
+.boton-verde {
+  background-color: #69B417;
+  color: #fff !important;
   font-weight: 500;
-  padding:15px;  
-  border-radius:50px;
+  padding: 0 15px;
+  border-radius: 50px;
+  position: relative;
+  text-transform: uppercase;
+  min-height:56.5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   &:hover {
     opacity:0.8;
     color:#fff;
   }
 }
-.bg-white {    
+.bg-white {
+  position:relative;
   .call-action {
     background-color:#69B417;
     background-image: url(../imagenes/call-action2.jpg); 
@@ -413,16 +425,19 @@ main {
     }
     p {
       padding-bottom:20px;
-      color:#000;
+      color:#000;      
+      width:70%;
       span {
-        color:#000;
+        color:#000 !important;
       }
     }
-    #boton-contacto-slider {
+    .boton-verde {
       margin:0 auto;
       text-align:center;
-      display:block;
-      width:max-content;
+      width: min-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     &:before {
       background: rgb(2,0,36);
@@ -474,23 +489,11 @@ main {
   padding:0;
 }
 
-.btn {
-  padding: 6px 0 6px 10px; 
-  border-radius: 50px;
-  background-color: transparent;
-  border:2px solid $color-primario;
+.btn { 
   transition: all 0.3s ease-out;
-  font-family: $botones-font;
-  font-size: $botones-size;
-  text-align: center;
-  color: $color-primario;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
   margin: 0 auto;
   &:hover {
     color: $color-terciario;
-    font-weight: bold;
     background: $color-primario;
     transition: all 0.5s ease-out;
     i::before {
@@ -504,14 +507,31 @@ main {
   }  
   i {
     color: $color-primario;
-    font-size: 40px;
-    margin: 0 5px 0 10px;
+    font-size: 35px;
+    margin: 0 0 0 5px;
     transform: scale(1);
     -webkit-transition: all 3s;
     vertical-align:middle;
   }
 }
-
+.boton-transparente,
+.boton-formulario {
+  border-radius: 50px;
+  background-color: transparent;
+  border:2px solid $color-primario;
+  font-family: $botones-font;
+  font-size: $botones-size;
+  text-align: center;
+  color: $color-primario;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  padding:0 5px 0 10px;
+  min-height:56.5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
 .boton-arrow-down {
   display: flex;
   position: relative;
@@ -544,9 +564,12 @@ main {
     i {
       color: $color-primario;
       font-size: 50px;
-      position: relative;
-      left:-10px;
-      margin: 0 5px 0 10px;
+      position: absolute;
+      top:-15px;
+      bottom:0%;
+      left:0%;
+      right:0%;
+      margin: 0 auto;
     }
     :hover i::before {
       color: #fff;
@@ -581,6 +604,9 @@ main {
   box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
   z-index:1000;
   transition: all 300ms ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:hover{
     background: #fff;
     z-index: 1000;
@@ -601,9 +627,7 @@ main {
     transform: translate(-50%, -50%);
     animation: ring 5s infinite;
   }
-  i {
-    position: relative;
-    top: 13px;
+  i {    
     font-size: 35px;
   }
 }
@@ -673,7 +697,7 @@ main {
     color: $color-parrafo;
     font-weight: 400;
     line-height: 26px;
-    letter-spacing: 1px;
+    letter-spacing: 0.9px;
     margin: 0;    
   }
 }
@@ -700,7 +724,7 @@ main {
     color: #a5a5a5;
     font-weight: 400;
     line-height: 26px;
-    letter-spacing: 1px;
+    letter-spacing: 0.9px;
     margin: 0 auto;
     padding: 20px 0;
     width: 55%;
@@ -951,7 +975,6 @@ main {
   margin: 0 auto;
 }
 .bg-white {
-  position:relative;
   h3 {
     font-family: $subtitulos-font;
     font-size: $subtitulos-size;
@@ -990,7 +1013,7 @@ main {
     color: $color-parrafo;
     font-weight: 400;
     line-height: 26px;
-    letter-spacing: 1px;
+    letter-spacing: 0.9px;
     margin: 0 auto;
   }
   i {
@@ -1012,7 +1035,7 @@ main {
   li span {
     color: $color-parrafo;
     font-weight: bold;
-    letter-spacing: 1;
+    letter-spacing: 0.9px;
   }
   img {
     width: 100%;
@@ -1042,6 +1065,9 @@ main {
       opacity: 1;
     }
   }
+  .ecodeck-calidad {
+    overflow:hidden;
+  }
   .ecodeck-calidad,
   .deck-sintetico-img,
   .ecodeck-pisos,
@@ -1057,6 +1083,7 @@ main {
   height: 30px;
   display:inline-block;
   float:left;
+  position:relative;
   margin-right:5px;
     .separador {
     position: absolute;
@@ -1132,7 +1159,6 @@ hr {
     padding:0;
   }
 }
-
 /*Aspectos decorativos*/
 .lista-colores {
   position: relative;
@@ -1164,7 +1190,7 @@ hr {
   }
   em {
     font-size:12px;
-    font-weight:light;
+    font-weight:lighter;
   }
 }
 .colores-baldosones,
@@ -1190,7 +1216,7 @@ hr {
     font-weight: bold;
     line-height: 24px;
     text-decoration: none;
-    letter-spacing: 1px;
+    letter-spacing: 0.9px;
     display: inline-block;
     margin:0;
   }
@@ -1276,17 +1302,21 @@ hr {
 } 
 .modal-body {
   .btn {
-    display:block; 
-    margin-top:25px;
-    padding:6px 10px; 
+    margin-top: 25px;
+    padding: 0px 10px;
     color: #fff;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    min-height: 56.5px;
+    display: block;
     i {
       color: #fff;
-      font-size: 40px;
-      margin: 0 5px 0 10px;
+      font-size: 35px;
+      margin: 0 0 0 10px;
       transform: scale(1);
       -webkit-transition: all 3s;
-      vertical-align:middle;
+      vertical-align: middle;
     }
   }
 } 
@@ -1363,7 +1393,7 @@ ul.filters > li > a{
   color: $color-secundario;
   line-height: 26px;
   text-decoration: none;
-  letter-spacing: 1px;
+  letter-spacing: 0.9px;
   margin: 0;
   transition-duration: .3s;
   &:hover{
@@ -1666,7 +1696,7 @@ td.madera {
     font-weight: 500;
     line-height: 24px;
     text-decoration: none;
-    letter-spacing: 1px;
+    letter-spacing: 0.9px;
     padding: 10px 0;
     margin: 0;
     span{
@@ -2152,7 +2182,7 @@ td.madera {
     color: $color-parrafo;
     font-weight:400;
     line-height: 26px;
-    letter-spacing: 1px;
+    letter-spacing: 0.9px;
     margin: 0;
     padding-top: 40px;
   }
@@ -2199,7 +2229,7 @@ td.madera {
     width: 100%;
   }
   input[type=password] {
-    letter-spacing: 0.3em;
+    letter-spacing: 0.9em;
   }
   label {
     font-family: $parrafo-font;
@@ -2251,7 +2281,7 @@ footer {
     color: #ada8a8 !important;
     font-weight: 400;
     line-height: 20px !important;;
-    letter-spacing: .4px;
+    letter-spacing: .9px;
     text-align: left !important;
     margin: 0 !important;
     padding: 20px 0;
@@ -2359,6 +2389,99 @@ footer {
   }
 }
 
+/*DISTRIBUIDORES*/
+#ecodeck-mar-del-plata {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%), url(../imagenes/calidad/calidad-03.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .titulo-mar-del-plata {
+    font-family: "DM Sans", sans-serif;
+    font-size: 60px;
+    color: #ABC566;
+    font-weight: 500;
+    text-align:center;
+    margin: 0;
+    line-height: 1;
+    margin: 0 auto;
+    position: relative;
+    animation: animation 2s ease-out;
+    span {
+      font-family: "DM Sans", sans-serif;
+      font-size: 60px;
+      font-weight: 500;
+      margin: 0;
+      -webkit-text-stroke: 1px white;
+      color: transparent;
+      line-height: 1;
+    }
+  }
+  p {
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 28px;
+    text-align:center;
+    letter-spacing: 0.9px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  .boton-verde {
+    margin: 0 auto;
+    text-align: center;
+    width: min-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.productos-mar-del-plata {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  .producto {
+    padding:0 10px;
+    transition:all 0.25s; 
+    img {
+      width:100%;
+      margin: 0 auto;
+      display: block;
+      position: relative;
+      top: 60px;
+      margin-top: -50px;
+      z-index: 10;
+    }
+    &:hover {   
+      transform: translateY(-15px);
+    } 
+  }
+  h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 28px;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    background-color: #ABC566;
+    padding: 65px 0 20px 0;
+  }
+}
+@media (max-width: 800px) {
+  .productos-mar-del-plata {
+    flex-direction: column;
+  }
+}
+
 /* ========================= Media Queries ========================= */
 
 @media (max-width: 1200px) {      
@@ -2375,7 +2498,10 @@ footer {
     h4 {
       font-size: 17px;
     }
-  }  
+  }   
+  .productos-mar-del-plata h4 {
+    height:142px;
+  } 
 }
 
 @media (max-width: 991px) {
@@ -2415,7 +2541,7 @@ footer {
     .ecodeck-experiencia {
       top:0;
       padding-bottom: 20px;
-      width: 3    0%;
+      width: 30%;
     }
     .ecodeck-pisos {
       margin-bottom:0;
@@ -2457,6 +2583,11 @@ footer {
   .calidad-insuperable .carousel-img {
     margin-bottom:40px;
   }
+  .tipos-perfiles {
+    img {
+      width:50%;
+    }
+  }
   footer {
     h4 {
       padding-top:30px;
@@ -2466,6 +2597,9 @@ footer {
     ul {
       padding: 0;
     }
+  }
+  .productos-mar-del-plata {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -2580,6 +2714,13 @@ footer {
     p {
       width: 90%;
     }
+  }  
+  .bg-white {
+    .call-action {
+      p {
+        width:90%;
+      }
+    }
   }
   .imagen-fondo p {
     width: 100%;
@@ -2615,14 +2756,14 @@ footer {
   .colores {
     margin-top:20px;
   }
+  .btn-wsp i {
+    top:0;
+  }
 }
 
 @media (max-width: 600px){
   .form-area{
     padding: 1.5em;
-  }
-  #boton-contacto-slider {
-    margin-bottom:10px;
   }
 }
 
@@ -2646,8 +2787,11 @@ footer {
   .btn {
     font-size: 12px;
   }
+  .boton-verde {
+  font-size: 14px;
+  }
   .btn i {
-    font-size:30px;
+    font-size:35px;
   }
   .encabezado-seccion h3,
   .encabezado-seccion h3 span {
@@ -2673,6 +2817,9 @@ footer {
   .colores-tablas-extrude {
     padding-bottom:10px;
   }
+  .laftImg {
+    display:none;
+  }
 }
 
 @media (max-width: 376px) {  
@@ -2685,6 +2832,9 @@ footer {
   }
   .producto-catalogo .small-img {
     width:auto;
+  }
+  .boton-verde {
+    margin-bottom:10px;
   }
 }
 

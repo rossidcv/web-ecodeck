@@ -1,4 +1,5 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +35,7 @@
 							<div class="carousel-texto">
 								<h2 class="animate__animated animate__zoomIn"> ¡EL MOMENTO DE RENOVAR<span> <br>ES AHORA!</span></h2>
 								<p class="animate__animated animate__zoomIn">Tranformá y renová tus espacios con los productos de Ecodeck.<br>Te asesoramos y te brindamos la mejor solución.</p>
-								<a id="boton-contacto-slider" class="btn btn-default btn animate__animated animate__slideInUp" href="contacto.html" role="button">Contactanos</a>
+								<a class="boton-verde btn-default btn animate__animated animate__slideInUp" href="contacto.html" role="button">Contactanos</a>
 							</div><!-- cierra carousel-texto-->
 						</div><!-- cierra carousel-bloque-->
 					</div><!-- cierra container-->
@@ -47,7 +48,7 @@
 							<div class="carousel-texto">
 								<h2 class="animate__animated animate__zoomIn"> DECK ECOLÓGICO<span> LIBRE DE MANTENIMIENTO</span></h2>
 								<p class="animate__animated animate__zoomIn">Invertí por única vez y disfrutalo toda la vida</p>
-								<a class="btn btn-default btn animate__animated animate__slideInUp" href="deck-ecologico.html" role="button">Quiero mi deck Ecológico<i class="bi bi-arrow-right-circle-fill"></i></a>
+								<a class="boton-transparente btn-default btn animate__animated animate__slideInUp" href="deck-ecologico.html" role="button">Quiero mi deck Ecológico<i class="bi bi-arrow-right-circle-fill"></i></a>
 							</div><!-- cierra carousel-texto-->
 						</div><!-- cierra carousel-bloque-->
 					</div><!-- cierra container-->
@@ -60,8 +61,8 @@
 							<div class="carousel-texto">
 								<h2 class="animate__animated animate__zoomIn">REVESTIMIENTO / CIELORRASO <span>DE PVC</span></h2>
 								<p class="animate__animated animate__zoomIn">Trabajamos con productos Teto Vinílico. Somos distribuidores exclusivos de Argentina.</p>
-								<a id="boton-contacto-slider" class="btn btn-default btn animate__animated animate__slideInUp" href="contacto.html" role="button">Contactanos</a>
-								<a class="btn btn-default btn animate__animated animate__slideInUp" href="cielorrasopvc.html" role="button">Conocé más<i class="bi bi-arrow-right-circle-fill"></i></a>
+								<a class="boton-verde btn-default btn animate__animated animate__slideInUp" href="contacto.html" role="button">Contactanos</a>
+								<a class="boton-transparente btn-default btn animate__animated animate__slideInUp" href="cielorrasopvc.html" role="button">Conocé más<i class="bi bi-arrow-right-circle-fill"></i></a>
 							</div><!-- cierra carousel-texto-->
 						</div><!-- cierra carousel-bloque-->
 					</div><!-- cierra container-->
@@ -74,7 +75,7 @@
 							<div class="carousel-texto">
 								<h2 class="animate__animated animate__zoomIn">PERFILES <span>WPC</span></h2>
 								<p class="animate__animated animate__zoomIn">Nuestros perfiles son ideales para utilizarse con fines decorativos en exterior e interior.</p>                      
-								<a class="btn btn-default btn animate__animated animate__slideInUp" href="perfiles.html" role="button">Ver perfiles<i class="bi bi-arrow-right-circle-fill"></i></a>
+								<a class="boton-transparente btn-default btn animate__animated animate__slideInUp" href="perfiles.html" role="button">Ver perfiles<i class="bi bi-arrow-right-circle-fill"></i></a>
 							</div><!-- cierra carousel-texto-->
 						</div><!-- cierra carousel-bloque-->
 					</div><!-- cierra container-->
@@ -87,7 +88,7 @@
 							<div class="carousel-texto">
 								<h2 class="animate__animated animate__zoomIn">WALL<span> PANEL</span></h2>
 								<p class="animate__animated animate__zoomIn">Conocé los diversos colores y texturas para uso interior y exterior.</p>
-								<a class="btn btn-default btn animate__animated animate__slideInUp" href="wall-panel.html" role="button">Ver detalles<i class="bi bi-arrow-right-circle-fill"></i></a>
+								<a class="boton-transparente btn-default btn animate__animated animate__slideInUp" href="wall-panel.html" role="button">Ver detalles<i class="bi bi-arrow-right-circle-fill"></i></a>
 							</div><!-- cierra carousel-texto-->
 						</div><!-- cierra carousel-bloque-->
 					</div><!-- cierra container-->
@@ -159,7 +160,7 @@
 			<div class="row">
 				<h3>Suscribite y recibí las últimas novedades</h3>
 				<p>Te invitamos a suscribirte para enterarte en forma directa de todas las novedades de nuestros productos.</p>
-				<a class="btn btn-default btn animate__animated animate__slideInUp" href="#" type="button" data-bs-toggle="modal" data-bs-target="#ModalForm">Suscribite<i class="bi bi-arrow-right-circle-fill"></i></a>
+				<a class="boton-transparente btn-default btn animate__animated animate__slideInUp" href="#" role="button" data-bs-toggle="modal" data-bs-target="#ModalForm">Suscribite<i class="bi bi-arrow-right-circle-fill"></i></a>
 
 				<div class="modal fade" id="ModalForm" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
 					<div class="modal-dialog modal-dialog-centered">
@@ -167,7 +168,7 @@
 							<div class="modal-body">
 								<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
 								<div class="form-area">
-									<h4 class="text-center">Completá los campos para suscribirte</h4>
+									<h4 class="text-center" id="ModalFormLabel">Completá los campos para suscribirte</h4>
 									<form>
 										<div class="mb-3">
 											<label for="exampleInputName1" class="form-label">Nombre</label>
@@ -175,7 +176,7 @@
 										</div><!-- cierra mb -->
 										<div class="mb-3 mt-4">
 											<label for="exampleInputEmail1" class="form-label">E-mail</label>
-											<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+											<input type="email" class="form-control" id="exampleInputEmail1" required>
 										</div><!-- cierra mb -->
 										<button type="submit" class="btn animate__animated animate__slideInUp">ENVIAR <i class="bi bi-envelope-fill"></i></button>
 									</form>
@@ -241,7 +242,7 @@
 			<div class="row">
 				<div class="cotizacion">
 					<p>Invertí por única vez y disfrutalo toda la vida</p>
-					<a class="btn animate__animated animate__slideInUp" href="contacto.html" role="button">Solicitar cotización<i class="bi bi-arrow-right-circle-fill"></i></a>
+					<a class="boton-transparente btn animate__animated animate__slideInUp" href="contacto.html" role="button">Solicitar cotización<i class="bi bi-arrow-right-circle-fill"></i></a>
 				</div><!-- cierra cotizacion-->
 			</div><!-- cierra row-->
 		</div><!-- cierra container-->
@@ -297,7 +298,7 @@
 		</div><!-- cierra container -->
 	</div><!-- cierra lista-medios-de-pago -->
 
-	<a href="https://api.whatsapp.com/send?phone=+" class="btn-wsp" target="_blank">
+	<a href="https://api.whatsapp.com/send?phone=5491167591079&amp;text=Hola,%20tengo%20una%20consulta" class="btn-wsp" target="_blank">
 		<i class="bi bi-whatsapp"></i>
 	</a> 
 

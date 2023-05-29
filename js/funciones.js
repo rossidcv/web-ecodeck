@@ -1,8 +1,4 @@
 $(document).ready(function(){
-  var flag = false;
-  var scroll;
-  var percentTime;
-
   $(function () {
     $('a[href^="#"]').on('click', function(event) {
       var target = $( $(this).attr('href') );
@@ -19,7 +15,6 @@ $(document).ready(function(){
 $(document).ready(function(){
   var flag = false;
   var scroll;
-  var percentTime;
 
   $(window).scroll(function(){
     scroll = $(window).scrollTop();
@@ -43,52 +38,22 @@ $(document).ready(function(){
     }       
   });
 });
-var lastScrollTop = 0;
-  $(window).scroll(function () {
-    console.log($(window).scrollTop())
-    if ($(window).scrollTop() > 0) {
-      $('.navbar').addClass('scrolled');
-    }
-    if ($(window).scrollTop() < 1) {
-      $('.navbar').removeClass('scrolled');
-    }
-  });
+
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 0) {
+    $('.navbar').addClass('scrolled');
+  }
+  if ($(window).scrollTop() < 1) {
+    $('.navbar').removeClass('scrolled');
+  }
+});
 
 /*Efecto botón hamburger*/
 $(document).ready(function(){
-  var flag = false;
-  var scroll;
-  var percentTime;  
-
   var hamburger = document.querySelector(".hamburger");
   hamburger.addEventListener("click", function() {
     hamburger.classList.toggle("is-active");
   });
-
-  var hamburger = document.querySelector(".hamburger");
-  menu.addEventListener("click", function() {
-    hamburger.classList.toggle("is-active");
-  });
-  $('.customer-logos').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    arrows: false,
-    dots: false,
-    pauseOnHover: false,
-    responsive: [{
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 3
-      }
-    }, {
-      breakpoint: 520,
-      settings: {
-        slidesToShow: 2
-      }
-    }]
-  }); 
 });
 
 /*Efecto marcas medios de pagor*/
@@ -189,196 +154,13 @@ $(document).ready(function(){
 });
 
 
-/*EFECTO CATALOGO*/
-$(document).ready(function(){
-  'use strict';
-  var $projects = $('.projects');
-  $projects.isotope({
-    itemSelector: '.item',
-    layoutMode: 'fitRows'
-  });
-  $('ul.filters > li').on('click', function(e){
-    e.preventDefault();
-    var filter = $(this).attr('data-filter');
-    $('ul.filters > li').removeClass('active');
-    $(this).addClass('active');
-    $projects.isotope({filter: filter});
-  });
-
-  $('.card').mouseenter(function(){
-    $(this).find('.card-overlay').css({'top': '-100%'});
-    $(this).find('.card-hover').css({'top':'0'});
-
-  }).mouseleave(function(){
-    $(this).find('.card-overlay').css({'top': '0'});
-    $(this).find('.card-hover').css({'top':'100%'});
-  });
-
-
-  //Inicializar la galería de productos
-  $('.producto').zoomImage();
-  $('.show-small-img:first-of-type').css({'border': 'solid 1px #951b25', 'padding': '2px'})
-  $('.show-small-img:first-of-type').attr('alt', 'now').siblings().removeAttr('alt')
-  $('.show-small-img').click(function () {
-    $('#show-img').attr('src', $(this).attr('src'))
-    $('#big-img').attr('src', $(this).attr('src'))
-    $(this).attr('alt', 'now').siblings().removeAttr('alt')
-    $(this).css({'border': 'solid 1px #951b25', 'padding': '2px'}).siblings().css({'border': 'none', 'padding': '0'})
-    if ($('#small-img-roll').children().length > 4) {
-      if ($(this).index() >= 3 && $(this).index() < $('#small-img-roll').children().length - 1){
-        $('#small-img-roll').css('left', -($(this).index() - 2) * 76 + 'px')
-      } else if ($(this).index() == $('#small-img-roll').children().length - 1) {
-        $('#small-img-roll').css('left', -($('#small-img-roll').children().length - 4) * 76 + 'px')
-      } else {
-        $('#small-img-roll').css('left', '0')
-      }
-    }
-  })
-});
-$('#next-img').click(function (){
-  $('#show-img').attr('src', $(".show-small-img[alt='now']").next().attr('src'))
-  $('#big-img').attr('src', $(".show-small-img[alt='now']").next().attr('src'))
-  $(".show-small-img[alt='now']").next().css({'border': 'solid 1px #951b25', 'padding': '2px'}).siblings().css({'border': 'none', 'padding': '0'})
-  $(".show-small-img[alt='now']").next().attr('alt', 'now').siblings().removeAttr('alt')
-  if ($('#small-img-roll').children().length > 4) {
-    if ($(".show-small-img[alt='now']").index() >= 3 && $(".show-small-img[alt='now']").index() < $('#small-img-roll').children().length - 1){
-      $('#small-img-roll').css('left', -($(".show-small-img[alt='now']").index() - 2) * 76 + 'px')
-    } else if ($(".show-small-img[alt='now']").index() == $('#small-img-roll').children().length - 1) {
-      $('#small-img-roll').css('left', -($('#small-img-roll').children().length - 4) * 76 + 'px')
-    } else {
-      $('#small-img-roll').css('left', '0')
-    }
-  }
-})
-
-$('#prev-img').click(function (){
-  $('#show-img').attr('src', $(".show-small-img[alt='now']").prev().attr('src'))
-  $('#big-img').attr('src', $(".show-small-img[alt='now']").prev().attr('src'))
-  $(".show-small-img[alt='now']").prev().css({'border': 'solid 1px #951b25', 'padding': '2px'}).siblings().css({'border': 'none', 'padding': '0'})
-  $(".show-small-img[alt='now']").prev().attr('alt', 'now').siblings().removeAttr('alt')
-  if ($('#small-img-roll').children().length > 4) {
-    if ($(".show-small-img[alt='now']").index() >= 3 && $(".show-small-img[alt='now']").index() < $('#small-img-roll').children().length - 1){
-      $('#small-img-roll').css('left', -($(".show-small-img[alt='now']").index() - 2) * 76 + 'px')
-    } else if ($(".show-small-img[alt='now']").index() == $('#small-img-roll').children().length - 1) {
-      $('#small-img-roll').css('left', -($('#small-img-roll').children().length - 4) * 76 + 'px')
-    } else {
-      $('#small-img-roll').css('left', '0')
-    }
-  }
-})
-//EFECTO ZOOM PRODUCTO CATALOGO
-
-;(function($) {
-
-  $.fn.zoomImage = function(paras) {       
-    var defaultParas = {
-      layerW: 100, 
-      layerH: 100, 
-      layerOpacity: 0.2, 
-      layerBgc: '#000',  
-      showPanelW: 300, 
-      showPanelH: 400, 
-      marginL: 5, 
-      marginT: 0 
-    };
-
-    paras = $.extend({}, defaultParas, paras);
-
-    $(this).each(function() {
-      var self = $(this).css({position: 'relative'});
-      var selfOffset = self.offset();
-      var imageW = self.width();
-      var imageH = self.height();
-
-      self.find('img').css({
-        width: '100%',
-        height: '100%'
-      });
-
-      var wTimes = paras.showPanelW / paras.layerW;
-      var hTimes = paras.showPanelH / paras.layerH;
-
-      var img = $('<img>').attr('src', self.attr("href")).css({
-        position: 'absolute',
-        left: '0',
-        top: '0',
-        width: imageW * wTimes,
-        height: imageH * hTimes
-      }).attr('id', 'big-img');
-
-      var layer = $('<div>').css({
-        display: 'none',
-        position: 'absolute',
-        left: '0',
-        top: '0',
-        backgroundColor: paras.layerBgc,
-        width: paras.layerW,
-        height: paras.layerH,
-        opacity: paras.layerOpacity,
-        border: '1px solid #ccc',
-        cursor: 'crosshair'
-      });
-
-      var showPanel = $('<div>').css({
-        display: 'none',
-        position: 'absolute',
-        overflow: 'hidden',
-        left: imageW + paras.marginL,
-        top: paras.marginT,
-        width: paras.showPanelW,
-        height: paras.showPanelH
-      }).append(img);
-
-      self.append(layer).append(showPanel);
-
-      self.on('mousemove', function(e) {
-        var x = e.pageX - selfOffset.left;
-        var y = e.pageY - selfOffset.top;
-
-        if(x <= paras.layerW / 2) {
-          x = 0;
-        }else if(x >= imageW - paras.layerW / 2) {
-          x = imageW - paras.layerW;
-        }else {
-          x = x - paras.layerW / 2;
-        }
-
-        if(y < paras.layerH / 2) {
-          y = 0;
-        } else if(y >= imageH - paras.layerH / 2) {
-          y = imageH - paras.layerH;
-        } else {
-          y = y - paras.layerH / 2;
-        }
-
-        layer.css({
-          left: x,
-          top: y
-        });
-
-        img.css({
-          left: -x * wTimes,
-          top: -y * hTimes
-        });
-      }).on('mouseenter', function() {
-        layer.show();
-        showPanel.show();
-      }).on('mouseleave', function() {
-        layer.hide();
-        showPanel.hide();
-      });
-    });
-  }
-})(jQuery);
-
-
 //EFECTO LUPA
 $(document).ready(function () {
-  $('.laftImg').bup('laftImg',1)
-  $('.laftImg1').bup('laftImg1',1)
-  $('.laftImg2').bup('laftImg2',1)
-  $('.laftImg3').bup('laftImg3',1)
-}) 
+  $('.laftImg').bup('laftImg',1);
+  $('.laftImg1').bup('laftImg1',1);
+  $('.laftImg2').bup('laftImg2',1);
+  $('.laftImg3').bup('laftImg3',1);
+});
 
 sup=`
 <nav class="navbar navbar-default" data-target=".navbar-collapse" data-toggle="collapse">
@@ -422,8 +204,8 @@ sup=`
       </div>
     </div>
   </nav>
-`
-document.write(sup)
+`;
+document.write(sup);
 
 
 sup=`
@@ -436,7 +218,7 @@ sup=`
               <div class="logo-footer">
                 <img src="imagenes/logo/ecodeck-logo.png" alt="logo Ecodeck">
                 <p>Somos una empresa dedicada a la venta, distribución e instalación de Productos Ecológicos Libres de mantenimiento. Nos especializamos en Decks de WPC, Revestimientos, Cielorrasos de PVC, Pérgolas y Parasoles de WPC. Materiales Premium de última generación.</p>
-                <a class="btn btn-default btn animate__animated animate__slideInUp" href="#" role="button" data-bs-toggle="modal" data-bs-target="#ModalForm">Suscribite<i class="bi bi-arrow-right-circle-fill"></i></a>                
+                <a class="boton-transparente btn btn-default btn animate__animated animate__slideInUp" href="#" role="button" data-bs-toggle="modal" data-bs-target="#ModalForm">Suscribite<i class="bi bi-arrow-right-circle-fill"></i></a>                
               </div><!-- cierra logo-footer-->
             </div><!-- cierra col-->
             <div class="col-lg-3 col-md-12"> 
@@ -472,15 +254,45 @@ sup=`
         </div> <!-- cierra py-3-->  
       </div><!-- cierra bg-dark -->       
     </footer>
-`
-document.write(sup)
+`;
+document.write(sup);
+
 
 sup=`
   <div class="footer-bottom">
       <p class="copyright">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Ecodeck. Todos los derechos reservados.</p>
     </div><!-- cierra footer-bottom -->
-  `
-document.write(sup)
+  `;
+document.write(sup);
+
+
+/*MODAL SUSCRIPCION*/
+sup=`
+<div class="modal fade" id="ModalForm" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="form-area">
+          <h4 class="text-center" id="ModalFormLabel">Completá los campos para suscribirte</h4>
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputName1" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="exampleInputName1" required>
+            </div><!-- cierra mb -->
+            <div class="mb-3 mt-4">
+              <label for="exampleInputEmail1" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+            </div><!-- cierra mb -->
+            <button type="submit" class="btn animate__animated animate__slideInUp">ENVIAR <i class="bi bi-envelope-fill"></i></button>
+          </form>
+        </div><!-- cierra form-area-->  
+      </div><!-- cierra modal-body-->  
+    </div><!-- cierra modal-content-->  
+  </div><!-- cierra modal-dialog-->  
+</div><!-- cierra modal-->  
+`;
+document.write(sup);
 
 
 document.querySelectorAll(".nav-link").forEach((link) => {
@@ -490,28 +302,27 @@ document.querySelectorAll(".nav-link").forEach((link) => {
   }  
 });
 
-
-
-var myModal = document.getElementById('myModal')
-var myInput = document.getElementById('myInput')
+var myModal = document.getElementById('myModal');
+var myInput = document.getElementById('myInput');
 
 myModal.addEventListener('shown.bs.modal', function () {
-  myInput.focus()
-})
+  myInput.focus();
+});
 
-var exampleModal = document.getElementById('exampleModal')
+var exampleModal = document.getElementById('exampleModal');
 exampleModal.addEventListener('show.bs.modal', function (event) {
   // Botón que activó el modal
-  var button = event.relatedTarget
+  var button = event.relatedTarget;
   // Extraer información de los atributos data-bs-*
-  var recipient = button.getAttribute('data-bs-whatever')
+  var recipient = button.getAttribute('data-bs-whatever');
   // Si es necesario, puedes iniciar una solicitud AJAX aquí
   // y luego realiza la actualización en una devolución de llamada.
   //
   // Actualizar el contenido del modal.
-  var modalTitle = exampleModal.querySelector('.modal-title')
-  var modalBodyInput = exampleModal.querySelector('.modal-body input')
+  var modalTitle = exampleModal.querySelector('.modal-title');
+  var modalBodyInput = exampleModal.querySelector('.modal-body input');
 
-  modalTitle.textContent = 'Nuevo mensaje para ' + recipient
-  modalBodyInput.value = recipient
-})
+  modalTitle.textContent = 'Nuevo mensaje para ' + recipient;
+  modalBodyInput.value = recipient;
+});
+
