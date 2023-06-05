@@ -299,7 +299,8 @@ main {
 .carousel-home {
   .carousel-item {   
     height: auto;
-    max-height: 100vh;   
+    max-height: 100vh; 
+    overflow:hidden;  
     &:before {
       background: rgba(0, 0, 0, 0.7);
       width: 100%;
