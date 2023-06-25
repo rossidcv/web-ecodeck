@@ -156,11 +156,13 @@ $(document).ready(function(){
 
 //EFECTO LUPA
 $(document).ready(function () {
-  $('.laftImg').bup('laftImg',1);
-  $('.laftImg1').bup('laftImg1',1);
-  $('.laftImg2').bup('laftImg2',1);
-  $('.laftImg3').bup('laftImg3',1);
-});
+  $('.laftImg').bup('laftImg',1)
+  $('.laftImg1').bup('laftImg1',1)
+  $('.laftImg2').bup('laftImg2',1)
+  $('.laftImg3').bup('laftImg3',1)
+  $('.laftImg4').bup('laftImg4',1)
+  $('.laftImg5').bup('laftImg5',1)
+}) 
 
 sup=`
 <nav class="navbar navbar-default" data-target=".navbar-collapse" data-toggle="collapse">
@@ -216,7 +218,7 @@ sup=`
           <div class="row">
             <div class="col-lg-5 col-md-12">
               <div class="logo-footer">
-                <img src="imagenes/logo/ecodeck-logo.png" alt="logo Ecodeck">
+                <a href="index.html"><img src="imagenes/logo/ecodeck-logo.png" alt="logo Ecodeck"></a>
                 <p>Somos una empresa dedicada a la venta, distribución e instalación de Productos Ecológicos Libres de mantenimiento. Nos especializamos en Decks de WPC, Revestimientos, Cielorrasos de PVC, Pérgolas y Parasoles de WPC. Materiales Premium de última generación.</p>
                 <a class="boton-transparente btn btn-default btn animate__animated animate__slideInUp" href="#" role="button" data-bs-toggle="modal" data-bs-target="#ModalForm">Suscribite<i class="bi bi-arrow-right-circle-fill"></i></a>                
               </div><!-- cierra logo-footer-->
@@ -237,7 +239,6 @@ sup=`
                 <h4>CONTACTO</h4>
                 <ul class="contacto-footer">
                   <li><a class="footer-direccion" href="https://goo.gl/maps/pG6BBr4cebvdmBFX9" target="_blank"><i class="bi bi-geo-alt"></i><span>Dirección Oficina administrativa y Showroom:</span> Amenabar 618, CABA </a></li>                
-                  <li><a href=""><i class="bi bi-telephone"></i> <span>Ventas:</span> (011) 5353-4870</a></li>
                   <li><a href=""><i class="bi bi-phone-vibrate"></i> <span>Celular:</span> (011) 15-6759-1079</a></li>
                   <li><a href=""><i class="bi bi-phone-vibrate"></i> <span>Celular:</span> (011) 15-6733-1111</a></li>
                   <li><a href=""><i class="bi bi-envelope"></i> <span>E-mail:</span> info@ecodeck.com.ar</a></li>        
