@@ -1667,7 +1667,7 @@ td.madera {
   }
   &:before {
     background: rgb(2,0,36);
-    background: linear-gradient(270deg, rgba(2,0,36,0) 0%, rgba(171,197,102,1) 23%);
+    background: linear-gradient(270deg, rgba(2,0,36,0) 0%, rgba(171,197,102,1) 45%);
     width: 100%;
     height: 100%;
     display: block;
@@ -1678,6 +1678,14 @@ td.madera {
     left: 0;
     right: 0;
     z-index: 0;
+  }
+  .lanzamiento {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    bottom:80px;
+    margin-bottom:-55px;
   } 
 }
 
@@ -2546,6 +2554,10 @@ footer {
       font-size:35px;
     }
   }
+  .wpc-carbon h3, 
+  .perfiles-wpc-carbon h3 {    
+    font-size:35px;   
+  }
   .ecodeck-pisos {
     width: 80%;
   }
@@ -2642,6 +2654,18 @@ footer {
   .tipos-perfiles {
     img {
       width:50%;
+    }
+  }
+  .wpc-carbon .lanzamiento, 
+  .perfiles-wpc-carbon .lanzamiento {
+    display:block;
+    margin:0 auto;
+    text-align:center;
+  }
+  .wpc-carbon .lanzamiento, 
+  .perfiles-wpc-carbon .lanzamiento {
+    img {
+      margin-bottom:55px;
     }
   }
   footer {
